@@ -556,7 +556,7 @@ body {
   transform-origin: center;
 }
 .menu__sound-adjustment__icon #sound-muted {
-  transition-delay: 0.3s;
+  transition: translate 0.15s 0.25s cubic-bezier(0.26, 0.81, 0.21, 0.98), scale 0.15s 0.25s cubic-bezier(0.06, 0.87, 0.51, 1.35), opacity 0.15s cubic-bezier(0.26, 0.81, 0.21, 0.98), fill 0.1s;
   translate: -0.2rem 0;
 }
 .menu__sound-adjustment__icon #sound-loud {
@@ -579,13 +579,15 @@ body {
 }
 .menu__sound-adjustment__icon--active #sound-low,
 .menu__sound-adjustment__icon--active #sound-loud {
-  transition-delay: 0.2s;
   opacity: 1;
   scale: 1;
   translate: 0;
 }
+.menu__sound-adjustment__icon--active #sound-low {
+  transition: scale 0.15s 0.2s cubic-bezier(0.06, 0.87, 0.51, 1.35), opacity 0.15s 0.2s cubic-bezier(0.26, 0.81, 0.21, 0.98), fill 0.1s;
+}
 .menu__sound-adjustment__icon--active #sound-loud {
-  transition-delay: 0.35s;
+  transition: scale 0.15s 0.35s cubic-bezier(0.06, 0.87, 0.51, 1.2), opacity 0.15s 0.35s cubic-bezier(0.26, 0.81, 0.21, 0.98), fill 0.1s;
 }
 .menu__mines-num {
   grid-column: 3/4;
@@ -604,6 +606,7 @@ body {
   border-radius: 100px;
   border: none;
   background-color: var(--color-secondary);
+  transition: all 0.3s;
   padding: 2rem;
   font-family: Popins, sans-serif;
   font-size: 2rem;
