@@ -90,6 +90,8 @@ export default class ClickHandler extends MarkCell {
     _openCell(cell, cellElem) {
         const { id: cellId } = cell;
 
+        if (cell.isFlag) this._subtractMarks();
+
         cell.isFlag = cell.isClose = false;
         cellElem.style.animation = 'cellFadeOut .2s';
 

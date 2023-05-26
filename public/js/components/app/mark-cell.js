@@ -74,6 +74,10 @@ export default class MarkCell extends PopupMenu {
         this._renderMarksNums();
     }
 
+    _subtractMarks() {
+        this.marksCounterElem.textContent = --this.marks;
+    }
+
     _renderMarksNums() {
         const marksCounterElem = this.marksCounterElem;
         marksCounterElem.textContent = this.marks || 0;
