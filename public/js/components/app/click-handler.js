@@ -2,13 +2,11 @@ import MarkCell from './mark-cell.js';
 import {
     addGameData,
     CSS_VAR,
-    LOSE_MSG,
     SOUNDS,
     storeUserData,
     STYLES_CELL,
     STYLES_POPUP,
     userData,
-    WIN_MSG
 } from '../../data/data.js';
 import { app, latestResults } from '../../../../main.js';
 
@@ -21,8 +19,6 @@ export default class ClickHandler extends MarkCell {
         this.isWin = false;
         const target = evt.target;
         const elemClassList = target.classList;
-
-        userData.time = app.timerCounter;
 
         this._playSound(SOUNDS.CELL_CLICK);
 
@@ -209,30 +205,5 @@ export default class ClickHandler extends MarkCell {
         });
 
         return Promise.all(animationQueue);
-    }
-
-    _drawMessage(message) {
-        if (this.timerId) clearInterval(this.timerId);
-
-        this.animate = this._createAnimateFunction();
-
-        message.forEach(cellId => {
-            const cellElem = this._getCellElement(cellId);
-
-            this.animate(() => {
-                cellElem.className = STYLES_CELL.DEF;
-                cellElem.classList.add(STYLES_CELL.CLOSED);
-            });
-        });
-    }
-
-    _drawLoseMessage() {
-        this._clearCells()
-            .then(this._drawMessage.bind(this, LOSE_MSG.get(userData.difficulty)));
-    }
-
-    _drawWinMessage() {
-        this._clearCells()
-            .then(this._drawMessage.bind(this, WIN_MSG));
     }
 }
