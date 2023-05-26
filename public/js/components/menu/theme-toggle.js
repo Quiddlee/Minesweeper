@@ -9,6 +9,11 @@ export default class ThemeToggle {
     constructor() {
         ({ isDarkTheme: this.isDarkTheme = true } = userData);
         this.toggleBtn.addEventListener('click', this._toggleThemeClickHandler.bind(this));
+
+        document.body.style.transition = 'none';
+        setTimeout(() => {
+            document.body.style.transition = '';
+        });
     }
 
     _renderThemeToggle() {
