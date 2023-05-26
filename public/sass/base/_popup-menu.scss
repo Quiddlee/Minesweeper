@@ -290,7 +290,7 @@
       font-weight: 600;
       font-size: 2rem;
       overflow: hidden;
-      transition: all 1s cubic-bezier(.56, .32, 0, 1.04);
+      transition: all 1s cubic-bezier(.26, .81, .21, .98);
 
       &__icon {
         fill: var(--color-primary);
@@ -305,18 +305,18 @@
       }
 
       &:hover {
-        scale: 1.1;
+        scale: .95;
       }
 
       #upper,
       #lower {
-        transition: scale 1s cubic-bezier(.56, .32, 0, 1.04);
+        transition: scale 1s cubic-bezier(.26, .81, .21, .98);
       }
 
       &:hover #upper,
       &:hover #lower {
-        scale: .9;
-        transition: translate .5s cubic-bezier(.56, .32, 0, 1.04),
+        scale: 1.05;
+        transition: translate .7s cubic-bezier(.32, .99, .49, .99),
         opacity .5s cubic-bezier(.56, .32, 0, 1.04);
       }
 
