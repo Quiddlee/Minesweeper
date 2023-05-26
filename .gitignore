@@ -7,7 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-../../minesweeper/quiddlee-JSFE2023Q1/minesweeper/node_modules
+node_modules
 dist
 dist-ssr
 *.local
