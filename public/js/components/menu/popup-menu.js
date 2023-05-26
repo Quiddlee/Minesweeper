@@ -2,8 +2,6 @@ import { STYLES_BTN, STYLES_MENU, STYLES_POPUP } from '../../data/data.js';
 import { latestResults } from '../../../../main.js';
 
 export default class PopupMenu {
-    latestGames;
-
     constructor() {
         this.popup = document.createElement('dialog');
         this.popupCloseBtn = document.createElement('button');
@@ -64,7 +62,7 @@ export default class PopupMenu {
 
             this.menu.classList.add(STYLES_MENU.MENU);
 
-            this.popupInner.prepend(this.popupCloseBtn, this.menu);
+            this.popupInner.prepend(this.menu);
             document.body.prepend(this.popup);
 
             this.menu.innerHTML = content;
@@ -73,19 +71,12 @@ export default class PopupMenu {
         if (!isMenu) {
             this.popup.classList.add(STYLES_POPUP.POPUP, cssClass);
 
-            this.popup.prepend(this.popupCloseBtn);
             document.body.prepend(this.popup);
 
             this.popup.innerHTML = content;
         }
 
         this.popup = document.querySelector(`.${ STYLES_POPUP.POPUP }`);
-    }
-
-    _renderPopupCloseBtn() {
-        this.popupCloseBtn.classList.add(STYLES_BTN.POPUP, STYLES_BTN.BTN, STYLES_BTN.CLOSE);
-        this.popupCloseBtn.textContent = '✖';
-        this.popup.append(this.popupCloseBtn);
     }
 
     _renderInner() {
@@ -95,6 +86,5 @@ export default class PopupMenu {
 
     init(cssClass, content, isMenu) {
         this._renderPopup(cssClass, content, isMenu);
-        this._renderPopupCloseBtn();
     }
 }

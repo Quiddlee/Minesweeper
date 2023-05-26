@@ -87,12 +87,6 @@
 .popup-active::backdrop {
   animation: backdropFadeIn 0.2s;
 }
-.popup__btn {
-  position: absolute;
-  right: -3rem;
-  top: -4rem;
-  color: var(--color-light-primary);
-}
 .popup--win, .popup--lose {
   padding: 5rem;
   font-size: 6rem;
