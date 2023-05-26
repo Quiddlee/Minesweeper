@@ -19,8 +19,8 @@
   text-align: center;
 
   transition: background-color .3s,
-  width .3s cubic-bezier(.72, .53, .05, 1.2),
-  height .25s cubic-bezier(.72, .53, .05, 1.2) .1s;
+  width .3s cubic-bezier(.72, .53, .05, 1.25),
+  height .25s cubic-bezier(.72, .53, .05, 1.25) .1s;
 
   &::backdrop {
     backdrop-filter: blur(.1rem) brightness(.7);

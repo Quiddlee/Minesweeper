@@ -75,7 +75,7 @@
   transform-origin: 42.3rem -17.6rem;
   font-size: 5rem;
   text-align: center;
-  transition: background-color 0.3s, width 0.3s cubic-bezier(0.72, 0.53, 0.05, 1.2), height 0.25s cubic-bezier(0.72, 0.53, 0.05, 1.2) 0.1s;
+  transition: background-color 0.3s, width 0.3s cubic-bezier(0.72, 0.53, 0.05, 1.25), height 0.25s cubic-bezier(0.72, 0.53, 0.05, 1.25) 0.1s;
 }
 .popup::backdrop {
   backdrop-filter: blur(0.1rem) brightness(0.7);
