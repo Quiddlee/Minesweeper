@@ -147,9 +147,9 @@ const CSS_VAR = {
 };
 
 const SOUNDS = {
-    LOSE: '../../../assets/sounds/lose.mp3',
-    WIN: '../../../assets/sounds/win.mp3',
-    CELL_CLICK: '../../../assets/sounds/cell.mp3'
+    LOSE: 'assets/sounds/lose.mp3',
+    WIN: 'assets/sounds/win.mp3',
+    CELL_CLICK: 'assets/sounds/cell.mp3'
 };
 
 const DIFFICULTIES = new Map([
