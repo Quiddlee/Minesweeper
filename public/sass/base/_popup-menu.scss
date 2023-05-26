@@ -336,7 +336,7 @@
       &:hover #upper,
       &:hover #lower {
         scale: 1.05;
-        transition: translate .7s cubic-bezier(.32, .99, .49, .99),
+        transition: translate .5s cubic-bezier(.32, .99, .49, .99),
         opacity .5s cubic-bezier(.56, .32, 0, 1.04);
       }
 
