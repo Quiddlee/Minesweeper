@@ -1,0 +1,177 @@
+.controls {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  align-items: center;
+  justify-items: center;
+
+  height: 12rem;
+  width: var(--game-field-width);
+
+  margin: 3rem 3rem;
+  padding: 0 1rem;
+
+  row-gap: 3rem;
+
+  transition: all .3s cubic-bezier(.17, .67, .28, 1.4);
+
+  &__restart-game {
+    justify-self: end;
+    transition: all .2s;
+
+    grid-row: 2 / 3;
+    grid-column: 4 / 5;
+
+    background-color: var(--color-secondary);
+
+    &:hover {
+      rotate: 30deg;
+    }
+
+    &__icon {
+      display: flex;
+      justify-content: center;
+
+      translate: -.1rem 0;
+
+      scale: .8333333;
+
+      height: 2.4rem;
+      width: 4rem;
+      fill: var(--color-primary);
+    }
+  }
+
+  &__timer-wrapper {
+    width: 13rem;
+    height: 5rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-self: start;
+
+    grid-column: 2 / 4;
+
+    border-radius: 100px;
+
+    &__icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      scale: .9;
+      fill: var(--color-secondary);
+    }
+
+    &__timer {
+      color: var(--color-secondary);
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &__click-counter {
+    justify-self: start;
+
+    @include flex-center;
+
+    grid-row: 2 / 3;
+
+    width: 4rem;
+    height: 4rem;
+
+    color: var(--color-primary);
+    font-size: 2rem;
+    font-weight: 600;
+    min-width: 2.86rem;
+
+    @include controls-rounded;
+
+    transition: background-color .3s;
+  }
+
+  &__num-of-flags {
+    justify-self: start;
+    transition: background-color .3s;
+
+    @include flex-center;
+
+    gap: 1rem;
+
+    width: 8rem;
+    height: 4rem;
+
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    @include controls-rounded;
+
+    &__icon {
+      @include controls-icon-2rem;
+    }
+
+    &__num {
+      @include controls-text;
+      color: var(--color-primary);
+    }
+  }
+
+  &__num-of-mines {
+    justify-self: end;
+    transition: background-color .3s;
+
+    @include flex-center;
+    gap: 1rem;
+
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+
+    min-width: 8rem;
+    min-height: 4rem;
+
+    @include controls-rounded;
+
+    &__icon {
+      @include controls-icon-2rem;
+      fill: var(--color-primary);
+    }
+
+    &__num {
+      @include controls-text;
+      color: var(--color-primary);
+    }
+  }
+
+  &__open-menu-btn {
+    display: flex;
+    justify-content: center;
+    padding: 1.35rem 0 1rem 0;
+
+    justify-self: end;
+
+    &__inner {
+      display: block;
+      width: 2rem;
+      height: .2rem;
+      background-color: var(--color-primary);
+
+      &:after,
+      &:before {
+        content: '';
+
+        display: block;
+        width: 100%;
+        height: .1rem;
+        background-color: var(--color-primary);
+      }
+
+      &:after {
+        height: .2rem;
+      }
+
+      &:before {
+        margin: .7rem 0 .5rem 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.btn {
+  width: 5rem;
+  height: 3rem;
+  background-color: var(--color-secondary);
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  transition: background-color .3s;
+
+  &--close {
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    font-size: 2rem;
+  }
+
+  &--rounded {
+    width: 4rem;
+    height: 4rem;
+  }
+}

@@ -1,0 +1,25 @@
+@keyframes restartFlip {
+  0% {
+    transform: rotate(30deg);
+    filter: blur(0);
+    scale: 1;
+  }
+
+  85% {
+    transform: rotate(-4720deg); // + 40
+    filter: blur(0);
+    scale: 1.05;
+  }
+
+  90% {
+    transform: rotate(-4660deg); // - 20
+    filter: blur(0);
+    scale: .95;
+  }
+
+  100% {
+    transform: rotate(-4680deg);
+    filter: blur(0);
+    scale: 1;
+  }
+}

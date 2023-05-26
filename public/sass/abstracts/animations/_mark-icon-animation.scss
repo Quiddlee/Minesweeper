@@ -1,0 +1,61 @@
+@keyframes markBannerFadeIn {
+  0% {
+    transform: translateY(-100%) rotate(-160deg);
+    opacity: 0;
+  }
+
+  40% {
+    transform: rotate(5deg);
+  }
+
+  90% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes markStickFadeIn {
+  0% {
+    transform: translateY(200%);
+  }
+
+  60% {
+    transform: translateY(-10%);
+  }
+
+  80% {
+    transform: translateY(20%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes markBannerFadeOut {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+
+  100% {
+    transform: translateY(-200%) rotate(-160deg);;
+  }
+}
+
+@keyframes markStickFadeOut {
+  0% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-70%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}

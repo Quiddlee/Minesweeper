@@ -1,0 +1,13 @@
+#app {
+  height: 100vh;
+  max-width: 128rem;
+  margin: 0 auto;
+
+  background-color: var(--color-primary);
+
+  display: flex;
+  justify-content: start;
+  flex-direction: column-reverse;
+  align-items: center;
+  transition: background-color .3s;
+}

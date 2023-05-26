@@ -1,0 +1,76 @@
+.game-field {
+  width: var(--game-field-width);
+  height: var(--game-field-height);
+  background-color: var(--color-dark-secondary);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all .3s cubic-bezier(.17, .43, 0, 1.78);
+
+  &__cell {
+    @include flex-center;
+
+    background-color: transparent;
+    width: var(--cell-width);
+    height: var(--cell-height);
+    cursor: pointer;
+    transition: all .1s ease;
+
+    &__mark-icon {
+      width: 1.7rem;
+      height: 1.7rem;
+
+      fill: white;
+    }
+
+    &--close {
+      background-color: var(--color-unopened-cells);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+
+    &--open-dark {
+      background-color: var(--cell-opened-even);
+    }
+
+    &--open-light {
+      background-color: var(--cell-opened-odd);
+    }
+
+    &--open-light,
+    &--open-dark {
+      border: none;
+      pointer-events: none;
+
+      &:hover {
+        border: none;
+      }
+    }
+
+    &--marked {
+      background-color: var(--color-mark-cell);
+      border: none;
+
+      &:hover {
+        border: none;
+      }
+    }
+  }
+
+  &__cell-text {
+    @include flex-center;
+
+    font-size: 1.7em;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color-secondary);
+
+    animation: textFadeIn .3s
+  }
+}

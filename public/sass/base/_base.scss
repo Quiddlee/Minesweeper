@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&family=Poppins:wght@500&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 60%;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 35%;
+  }
+}
+
+body {
+  font-family: Open Sans, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
