@@ -246,6 +246,9 @@ export default class App extends ClickHandler {
             const min = Math.floor(counter / 60).toString();
             const sec = Math.floor(counter % 60).toString();
             timerElem.textContent = `${ min.padStart(2, '0') }:${ sec.padStart(2, '0') }`;
+
+            userData.time = this.timerCounter;
+            storeUserData();
         };
 
         this.timerId = setInterval(() => {
