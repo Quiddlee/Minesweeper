@@ -18,7 +18,9 @@
   font-size: 5rem;
   text-align: center;
 
-  transition: all .3s;
+  transition: background-color .3s,
+  width .3s cubic-bezier(.72, .53, .05, 1.2),
+  height .25s cubic-bezier(.72, .53, .05, 1.2) .1s;
 
   &::backdrop {
     backdrop-filter: blur(.1rem) brightness(.7);
@@ -69,10 +71,17 @@
     &__inner {
       width: 100%;
       height: 100%;
-      transition: all .4s cubic-bezier(.72, .53, .05, 1.04);
+      transition: all .4s cubic-bezier(.72, .53, .05, 1.1);
+
+      &--active {
+        translate: 0 -100%;
+      }
     }
 
     &--active {
+      height: 80vh;
+      width: 50vw;
+
       @media only screen and (max-width: $bp-largest) {
         min-width: 70vw;
         min-height: 90vh;

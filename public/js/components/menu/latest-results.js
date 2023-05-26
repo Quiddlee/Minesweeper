@@ -21,25 +21,16 @@ export default class LatestResults {
 
     _showLatestResults() {
         this.popup.classList.add(STYLES_MENU.POPUP_MENU_ACTIVE);
-
-        this.popupInner.style.translate = '0 -100%';
-        this.popup.style.height = '80vh';
-        this.popup.style.width = '50vw';
-        this.latestResults.style.cssText = `
-            opacity: 1;
-            visibility: visible;
-        `;
+        this.menu.classList.add(STYLES_MENU.MENU_ACTIVE);
+        this.latestResults.classList.add(STYLES_MENU.LATEST_RESULTS_ACTIVE);
+        this.popupInner.classList.add(STYLES_MENU.POPUP_MENU_INNER_ACTIVE);
     }
 
     _btnBackHandler() {
         this.popup.classList.remove(STYLES_MENU.POPUP_MENU_ACTIVE);
-
-        this.popupInner.style.translate = '0';
-        this.popup.style = '';
-        this.latestResults.style.cssText = `
-            opacity: 0;
-            visibility: hidden;
-        `;
+        this.menu.classList.remove(STYLES_MENU.MENU_ACTIVE);
+        this.latestResults.classList.remove(STYLES_MENU.LATEST_RESULTS_ACTIVE);
+        this.popupInner.classList.remove(STYLES_MENU.POPUP_MENU_INNER_ACTIVE);
     }
 
     _renderLatestResultsBtn() {

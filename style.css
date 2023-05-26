@@ -75,7 +75,7 @@
   transform-origin: 42.3rem -17.6rem;
   font-size: 5rem;
   text-align: center;
-  transition: all 0.3s;
+  transition: background-color 0.3s, width 0.3s cubic-bezier(0.72, 0.53, 0.05, 1.2), height 0.25s cubic-bezier(0.72, 0.53, 0.05, 1.2) 0.1s;
 }
 .popup::backdrop {
   backdrop-filter: blur(0.1rem) brightness(0.7);
@@ -120,7 +120,14 @@
 .popup--menu__inner {
   width: 100%;
   height: 100%;
-  transition: all 0.4s cubic-bezier(0.72, 0.53, 0.05, 1.04);
+  transition: all 0.4s cubic-bezier(0.72, 0.53, 0.05, 1.1);
+}
+.popup--menu__inner--active {
+  translate: 0 -100%;
+}
+.popup--menu--active {
+  height: 80vh;
+  width: 50vw;
 }
 @media only screen and (max-width: 75em) {
   .popup--menu--active {
@@ -431,6 +438,10 @@ body {
   padding: 4rem;
   height: 100%;
   width: 100%;
+  transition: all 0.3s;
+}
+.menu--active {
+  filter: blur(0.3rem);
 }
 .menu__theme-toggle {
   position: relative;
@@ -642,6 +653,10 @@ body {
   gap: 1rem;
   width: 100%;
   height: 100%;
+}
+.menu__latest-results-wrapper--active {
+  opacity: 1;
+  visibility: visible;
 }
 @media only screen and (max-width: 37.5em) {
   .menu__latest-results-wrapper {

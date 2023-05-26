@@ -49,9 +49,11 @@ const STYLES_CONTROLS = {
 
 const STYLES_MENU = {
     MENU: 'menu',
+    MENU_ACTIVE: 'menu--active',
     POPUP_MENU: 'popup--menu',
     POPUP_MENU_ACTIVE: 'popup--menu--active',
     POPUP_MENU_INNER: 'popup--menu__inner',
+    POPUP_MENU_INNER_ACTIVE: 'popup--menu__inner--active',
 
     THEME_TOGGLE: 'menu__theme-toggle',
     THEME_TOGGLE_WRAPPER: 'menu__theme-toggle__wrapper',
@@ -83,6 +85,7 @@ const STYLES_MENU = {
     LATEST_RESULT_BTN_ICON: 'menu__latest-result--btn__icon',
 
     LATEST_RESULTS: 'menu__latest-results-wrapper',
+    LATEST_RESULTS_ACTIVE: 'menu__latest-results-wrapper--active',
     LATEST_RES_BLOCK: 'menu__latest-results-wrapper__res__block',
     LATEST_RES: 'menu__latest-results-wrapper__res',
     LATEST_RES_WIN: 'menu__latest-results-wrapper__res--win',
