@@ -164,8 +164,8 @@
       }
 
       #sound-muted {
-        transition: translate .15s .3s cubic-bezier(.26, .81, .21, .98),
-        scale .15s .3s cubic-bezier(.06, .87, .51, 1.35),
+        transition: translate .15s .2s cubic-bezier(.26, .81, .21, .98),
+        scale .15s .2s cubic-bezier(.06, .87, .51, 1.35),
         opacity .15s cubic-bezier(.26, .81, .21, .98),
         fill .1s;
         translate: -.2rem 0;
@@ -202,14 +202,14 @@
         }
 
         #sound-low {
-          transition: scale .15s .2s cubic-bezier(.06, .87, .51, 1.35),
+          transition: scale .15s .15s cubic-bezier(.06, .87, .51, 1.35),
           opacity .15s .2s cubic-bezier(.26, .81, .21, .98),
           fill .1s;
         }
 
         #sound-loud {
-          transition: scale .15s .35s cubic-bezier(.06, .87, .51, 1.20),
-          opacity .15s .35s cubic-bezier(.26, .81, .21, .98),
+          transition: scale .15s .3s cubic-bezier(.06, .87, .51, 1.20),
+          opacity .15s .3s cubic-bezier(.26, .81, .21, .98),
           fill .1s;
         }
       }

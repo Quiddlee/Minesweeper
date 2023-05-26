@@ -1,13 +1,5 @@
 import MarkCell from './mark-cell.js';
-import {
-    addGameData,
-    CSS_VAR,
-    SOUNDS,
-    storeUserData,
-    STYLES_CELL,
-    STYLES_POPUP,
-    userData,
-} from '../../data/data.js';
+import { addGameData, CSS_VAR, SOUNDS, storeUserData, STYLES_CELL, STYLES_POPUP, userData, } from '../../data/data.js';
 import { app, latestResults } from '../../../../main.js';
 
 export default class ClickHandler extends MarkCell {
